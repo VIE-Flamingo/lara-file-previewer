@@ -17,19 +17,56 @@ To use Lara File Previewer, your application must meet the following requirement
 
 ## Installation
 
-You can install the package via Composer:
+## Installation
 
-```bash
-    composer require khutachan/lara-file-previewer
+To install the package, you need to update your `composer.json` file to include the repository and then require the package.
+
+1. **Add the repository to your `composer.json` file**:
+
+    Open your `composer.json` file and add the following to the `repositories` section:
+
+```json
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/khutachan/lara-file-previewer"
+        }
+    ]
 ```
 
-Publish the package assets:
+    If the `repositories` section does not exist, you can add it.
+
+2. **Require the package**:
+
+    Add the package to the `require` section in your `composer.json`:
+
+```json
+    "require": {
+        "khutachan/lara-file-previewer": "dev-main"
+    }
+```
+
+3. **Run Composer Update**:
+
+    After adding the repository and require entries, run the following command to install the package:
+
+```bash
+    composer update khutachan/lara-file-previewer
+```
+
+This will install the package from the specified repository and make it available for use in your Laravel application.
+
+4. **Publish the package assets**:
 
 ```bash
     php artisan vendor:publish --provider="Khutachan\LaraFilePreviewer\LaraFilePreviewerServiceProvider" --tag=assets
 ```
 
-Publish the package views (optional, for UI customization):
+5. (Optional) **Publish the package views (for UI customization):**
+
+    This step is optional and allows you to customize the UI of the file previewer by modifying the package's views.
+
+    **Note:** This has only been tested on Laravel. The compatibility with other frameworks has not been verified.
 
 ```bash
     php artisan vendor:publish --provider="Khutachan\LaraFilePreviewer\LaraFilePreviewerServiceProvider" --tag=views
@@ -52,11 +89,11 @@ Add the alias to your Laravel configuration:
 > **In case you’re unsure where to add the alias:**
 > To integrate the package with Laravel, you'll need to add the alias to your Laravel configuration. Specifically, you should include the alias within the `config/app.php` file under the `aliases` key.
 > Here’s how you can do it:
-> 
+>
 > 1. **Open `config/app.php`**: This file contains your application's service providers and aliases configuration.
 > 2. **Locate the `aliases` Array**: Find the `aliases` key in the `config/app.php` file.
 > 3. **Add the Alias**: Include the following line within the `aliases` array to register the `LaraFilePreviewer` facade:
-> 
+>
 > By following these steps, you will ensure that the `LaraFilePreviewer` facade is properly registered and can be easily accessed throughout your Laravel application.
 
 #### Here is an example
