@@ -4,7 +4,7 @@ An inspired version of Laravel File Viewer.
 
 ## Overview
 
-Lara File Previewer is a Laravel package designed to offer a seamless and efficient solution for file previews within your applications. This package builds upon the concepts of the [Laravel File Viewer](https://github.com/vish4395/lara-file-previewer) (Changelog version 1.0.0 - 201X-XX-XX) developed by Vishal Sharma, incorporating several custom modifications to enhance its functionality.
+Lara File Previewer is a Laravel package designed to offer a seamless and efficient solution for file previews within your applications. This package builds upon the concepts of the [Laravel File Viewer](https://github.com/vish4395/lara-file-previewer) (Packagist version 1.0.2) developed by Vishal Sharma, incorporating several custom modifications to enhance its functionality.
 
 Lara File Previewer provides the same core features as Laravel File Viewer but with additional improvements and adaptations tailored to better fit your needs. Whether you need to preview documents, images, or other file types, this package streamlines the process, making it easier to integrate and use within your Laravel projects.
 
@@ -49,15 +49,15 @@ Currently, the package supports only one type of file per view. Opening multiple
 
 Add the alias to your Laravel configuration:
 
-**In case you’re unsure where to add the alias:**
-To integrate the package with Laravel, you'll need to add the alias to your Laravel configuration. Specifically, you should include the alias within the `config/app.php` file under the `aliases` key.
-Here’s how you can do it:
-
-1. **Open `config/app.php`**: This file contains your application's service providers and aliases configuration.
-2. **Locate the `aliases` Array**: Find the `aliases` key in the `config/app.php` file.
-3. **Add the Alias**: Include the following line within the `aliases` array to register the `LaraFilePreviewer` facade:
-
-By following these steps, you will ensure that the `LaraFilePreviewer` facade is properly registered and can be easily accessed throughout your Laravel application.
+> **In case you’re unsure where to add the alias:**
+> To integrate the package with Laravel, you'll need to add the alias to your Laravel configuration. Specifically, you should include the alias within the `config/app.php` file under the `aliases` key.
+> Here’s how you can do it:
+> 
+> 1. **Open `config/app.php`**: This file contains your application's service providers and aliases configuration.
+> 2. **Locate the `aliases` Array**: Find the `aliases` key in the `config/app.php` file.
+> 3. **Add the Alias**: Include the following line within the `aliases` array to register the `LaraFilePreviewer` facade:
+> 
+> By following these steps, you will ensure that the `LaraFilePreviewer` facade is properly registered and can be easily accessed throughout your Laravel application.
 
 #### Here is an example
 
@@ -137,3 +137,9 @@ We would like to acknowledge the original creator, Vishal Sharma, for their work
 ## License
 
 This package is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Demo:
+
+A demo from Laravel File Viewer
+
+https://user-images.githubusercontent.com/12929023/210215225-000507cf-d8f4-4e5b-b7ad-ad6a2276ac93.mp4
