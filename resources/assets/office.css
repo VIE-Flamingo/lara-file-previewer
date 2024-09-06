@@ -1,0 +1,15 @@
+.close-tab-button {
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 9999;
+}
+.close-tab-button:hover {
+    background-color: #0056b3;
+}

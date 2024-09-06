@@ -11358,7 +11358,6 @@
                 /***/
             })
         /******/]);
-        //# sourceMappingURL=viewer.js.map
 
         // open a file in the viewer
         // The workerSrc property shall be specified.

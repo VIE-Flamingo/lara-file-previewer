@@ -5,7 +5,7 @@
             {{$filename}}
         </h4>
     </div>
-    
+
     <div class="col-md-12">
         <div>
             <div class="d-sm-inline-block d-block pr-1 pl-1 border-right"><label>{{__('Type')}}</label>: {{$type}}</div>
