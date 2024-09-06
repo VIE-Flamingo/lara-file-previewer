@@ -5,6 +5,7 @@ All notable changes to `lara-file-previewer` will be documented in this file
 ## 1.0.2
 
 - Add failed view.
+- Clean up views.
 
 ## 1.0.1
 

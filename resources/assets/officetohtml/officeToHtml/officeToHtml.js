@@ -89,10 +89,10 @@
                 fixedColumnsLeft: 0,
                 fixedRowsTop: 0,
                 language: "en-US",
-                search: false,
+                search: true,
                 selectionMode: "single",
                 sortIndicator: false,
-                readOnly: false,
+                readOnly: true,
                 startRows: 1,
                 startCols: 1,
                 rowHeaders: true,
@@ -11570,7 +11570,7 @@
                 //availableWidth = Math.max(subDiv.width(),600);
                 //availableHeight = Math.max(subDiv.height(), 500);
                 availableWidth = $container.width() - 20;
-                availableHeight = $container.height() - ((sheetSet.search) ? 90 : 50);
+                availableHeight = $container.height() - ((sheetSet.search) ? 122 : 50);
                 /* add header row for table */
                 if (!json) json = [];
                 json.forEach(function (r) {
