@@ -4,7 +4,7 @@ An inspired version of Laravel File Viewer.
 
 ## Overview
 
-Lara File Previewer is a package designed to provide a streamlined and efficient way to preview files within Laravel applications. This package is inspired by the [Laravel File Viewer](https://github.com/vish4395/laravel-file-viewer) created by Vishal Sharma.
+Lara File Previewer is a package designed to provide a streamlined and efficient way to preview files within Laravel applications. This package is inspired by the [Laravel File Viewer](https://github.com/vish4395/lara-file-previewer) created by Vishal Sharma.
 
 ## Inspiration
 
