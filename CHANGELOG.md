@@ -6,6 +6,7 @@ All notable changes to `lara-file-previewer` will be documented in this file
 
 - Add failed view.
 - Clean up views.
+- Fixed issue where adding a search feature caused the sheet tabs to overlap and obscure the table.
 
 ## 1.0.1
 

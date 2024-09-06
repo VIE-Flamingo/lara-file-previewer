@@ -4,68 +4,122 @@ An inspired version of Laravel File Viewer.
 
 ## Overview
 
-Lara File Previewer is a package designed to provide a streamlined and efficient way to preview files within Laravel applications. This package is inspired by the [Laravel File Viewer](https://github.com/vish4395/lara-file-previewer) (Changelog version 1.0.0 - 201X-XX-XX) created by Vishal Sharma. It does the same things as Laravel File Viewer does with some self modifications of mine.
+Lara File Previewer is a Laravel package designed to offer a seamless and efficient solution for file previews within your applications. This package builds upon the concepts of the [Laravel File Viewer](https://github.com/vish4395/lara-file-previewer) (Changelog version 1.0.0 - 201X-XX-XX) developed by Vishal Sharma, incorporating several custom modifications to enhance its functionality.
+
+Lara File Previewer provides the same core features as Laravel File Viewer but with additional improvements and adaptations tailored to better fit your needs. Whether you need to preview documents, images, or other file types, this package streamlines the process, making it easier to integrate and use within your Laravel projects.
+
+## Requirements
+
+To use Lara File Previewer, your application must meet the following requirements:
+
+-   PHP: ^7.4|^8.0
+-   Laravel Framework: ^9.0|^10.0
 
 ## Installation
 
-You can install the package via composer:
+You can install the package via Composer:
 
 ```bash
-composer require khutachan/lara-file-previewer
+    composer require khutachan/lara-file-previewer
 ```
 
-Publish assets
+Publish the package assets:
 
 ```bash
-php artisan vendor:publish  --provider="Khutachan\LaraFilePreviewer\LaraFilePreviewerServiceProvider" --tag=assets
+    php artisan vendor:publish --provider="Khutachan\LaraFilePreviewer\LaraFilePreviewerServiceProvider" --tag=assets
 ```
 
-Publish views (optional)(for customize ui)
+Publish the package views (optional, for UI customization):
 
 ```bash
-php artisan vendor:publish  --provider="Khutachan\LaraFilePreviewer\LaraFilePreviewerServiceProvider" --tag=views
+    php artisan vendor:publish --provider="Khutachan\LaraFilePreviewer\LaraFilePreviewerServiceProvider" --tag=views
 ```
 
 ## Usage
 
+### For Performance
+
+To ensure optimal performance, it is recommended to open each file preview in a new blank tab. This approach helps to avoid potential conflicts with existing scripts and CSS styles in the user's project, ensuring that the preview operates smoothly and without interference.
+
+### File Type Limitation
+
+Currently, the package supports only one type of file per view. Opening multiple files of the same type within a single view may cause conflicts, such as duplicate element IDs when scripts are executed. To prevent such issues, it is advisable to use separate views or tabs for different files of the same type.
+
 ### Laravel Integration
 
-Add alias to your Laravel configuration:
+Add the alias to your Laravel configuration:
+
+**In case you’re unsure where to add the alias:**
+To integrate the package with Laravel, you'll need to add the alias to your Laravel configuration. Specifically, you should include the alias within the `config/app.php` file under the `aliases` key.
+Here’s how you can do it:
+
+1. **Open `config/app.php`**: This file contains your application's service providers and aliases configuration.
+2. **Locate the `aliases` Array**: Find the `aliases` key in the `config/app.php` file.
+3. **Add the Alias**: Include the following line within the `aliases` array to register the `LaraFilePreviewer` facade:
+
+By following these steps, you will ensure that the `LaraFilePreviewer` facade is properly registered and can be easily accessed throughout your Laravel application.
+
+#### Here is an example
 
 ```php
-'aliases' => Facade::defaultAliases()->merge([
-    'LaraFilePreviewer' => Khutachan\LaraFilePreviewer\LaraFilePreviewerFacade::class,
-])->toArray(),
+    'aliases' => Facade::defaultAliases()->merge([
+        'LaraFilePreviewer' => Khutachan\LaraFilePreviewer\LaraFilePreviewerFacade::class, //This line registers the LaraFilePreviewer facade. Ensure that you place it within the aliases array in config/app.php.
+    ])->toArray(),
 ```
 
-### WinterCMS Integration
+### OctoberCMS - WinterCMS Integration
 
-Register alias to your boot() method of Plugin.php configuration:
+Register the alias in your OctoberCMS - WinterCMS plugin:
+
+#### Here is an example
 
 ```php
-public function boot(){
-    $this->app->register(\Khutachan\LaraFilePreviewer\LaraFilePreviewerServiceProvider::class);
-}
+    namespace Author\Vendor;
+
+    class Plugin extends PluginBase
+    {
+        public function boot(){
+            //Add this line inside boot() method.
+            $this->app->register(\Khutachan\LaraFilePreviewer\LaraFilePreviewerServiceProvider::class);
+        }
+    }
 ```
 
 ### Example
 
 ```php
-use LaraFilePreviewer;
-/*
- * ...
- */
-public function file_preview($filename){
-        $filepath = 'public/'.$filename;
-        $file_url = asset('storage/'.$filename);
-        $file_data = [
+    use LaraFilePreviewer;
+
+    /**
+     * Generate a file preview for the given file name.
+     *
+     * This method constructs a file path and URL based on the provided filename,
+     * then creates an array of file data to be used for the preview. It calls
+     * the `LaraFilePreviewer::show()` method, which handles generating and returning
+     * the preview view as a string. This method's primary purpose is to format
+     * the necessary file data and pass it to the `show()` method. The `show()` method
+     * internally returns a view, which is rendered as HTML.
+     *
+     * Note: The `LaraFilePreviewer::show()` method is responsible for returning the
+     * view, so this method itself does not directly handle view rendering.
+     *
+     * @param string $fileName The name of the file to preview. This should be the
+     *                         relative path or name of the file to generate a preview for.
+     * @return string The HTML content for the file preview, generated by the
+     *                `LaraFilePreviewer::show()` method.
+     */
+    public function filePreview($fileName) : string
+    {
+        $filePath = 'public/'.$fileName;
+        $fileUrl = asset('storage/'.$fileName);
+        $fileData = [
             [
                 'label' => __('Label'),
                 'value' => "Value"
             ]
         ];
-        return LaraFilePreviewer::show($filename,$filepath,$file_url,$file_data);
-      }
+        return LaraFilePreviewer::show($fileName, $filePath, $fileUrl, $fileData);
+    }
 ```
 
 ## Changelog
