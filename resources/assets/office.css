@@ -2,7 +2,7 @@
     position: fixed;
     top: 30px;
     right: 40px;
-    background-color: #007bff;
+    background-color: #dc3545; /* Đỏ tươi */
     color: white;
     border: none;
     border-radius: 3px;
@@ -11,5 +11,27 @@
     z-index: 9999;
 }
 .close-tab-button:hover {
-    background-color: #0056b3;
+    background-color: #c82333; /* Đỏ đậm */
+}
+
+.callout {
+    border-left: 4px solid #dc3545; /* Đỏ tươi */
+    background-color: #f8d7da; /* Đỏ nhạt */
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.callout-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #dc3545; /* Đỏ tươi */
+}
+
+.callout-message {
+    margin-top: 5px;
+    font-size: 16px;
+    color: #333;
 }

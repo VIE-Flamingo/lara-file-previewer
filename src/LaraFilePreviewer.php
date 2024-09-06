@@ -9,7 +9,9 @@ class LaraFilePreviewer
     public function show(String $filename, String $filePath, String $file_url, $file_data = [])
     {
         if (!Storage::exists($filePath)) {
-            abort(404, __("file_not_found_or_deleted"));
+            return view('lara-file-previewer::previewError', [
+                'message' => __('File does not exist'),
+            ]);
         }
         $type = Storage::mimeType($filePath);
         $metadata = [
@@ -29,10 +31,8 @@ class LaraFilePreviewer
             case 'video':
                 return view('lara-file-previewer::previewFileVideo', $viewdata);
                 break;
-            
             default:
                 return view('lara-file-previewer::previewFileOffice', $viewdata);
-                // return view('lara-file-previewer::previewFileGoogle', $viewdata);
                 break;
         }
     }
