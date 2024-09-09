@@ -6,24 +6,6 @@
 @section('content')
 <script src="https://cdn.plyr.io/3.7.2/plyr.js"></script>
 <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css" />
-<style>
-    .file-detail-card {
-        width: 100%;
-        bottom: 0px;
-        left: 0px;
-        z-index: 999;
-        background: #ffffffed;
-        /* position: fixed; */
-    }
-
-    .preview_container {
-        /* border: solid 1px lightgray; */
-        overflow: scroll;
-        background: white;
-        padding: 1em;
-        height: 90vh
-    }
-</style>
 <div class="row">
     <div class="col-md-12">
         <div class="card file-detail-card m-0">
