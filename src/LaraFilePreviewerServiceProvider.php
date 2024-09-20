@@ -31,7 +31,7 @@ class LaraFilePreviewerServiceProvider extends ServiceProvider
 
             // Publishing assets.
             $this->publishes([
-                __DIR__.'/../resources/assets' => public_path('vendor/lara-file-previewer'),
+                __DIR__.'/../resources/assets' => public_path('plugins/hippo/core/assets/vendor/lara-file-previewer'),
             ], 'assets');
 
             // Publishing the translation files.

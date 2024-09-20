@@ -5,41 +5,41 @@ $page_title = $filename;
 
 @section('content')
     <!--PDF-->
-    <link rel="stylesheet" href="{{ asset('vendor/lara-file-previewer/officetohtml/pdf/pdf.viewer.css') }}">
-    <script src="{{ asset('vendor/lara-file-previewer/officetohtml/pdf/pdf.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('plugins/hippo/core/assets/vendor/lara-file-previewer/officetohtml/pdf/pdf.viewer.css') }}">
+    <script src="{{ asset('plugins/hippo/core/assets/vendor/lara-file-previewer/officetohtml/pdf/pdf.js') }}"></script>
     <!--Docs-->
-    <script src="{{ asset('vendor/lara-file-previewer/officetohtml/docx/jszip-utils.js') }}"></script>
-    <script src="{{ asset('vendor/lara-file-previewer/officetohtml/docx/mammoth.browser.min.js') }}"></script>
+    <script src="{{ asset('plugins/hippo/core/assets/vendor/lara-file-previewer/officetohtml/docx/jszip-utils.js') }}"></script>
+    <script src="{{ asset('plugins/hippo/core/assets/vendor/lara-file-previewer/officetohtml/docx/mammoth.browser.min.js') }}"></script>
     <!--PPTX-->
-    <link rel="stylesheet" href="{{ asset('vendor/lara-file-previewer/officetohtml/PPTXjs/css/pptxjs.css') }}">
-    <link rel="stylesheet" href="{{ asset('vendor/lara-file-previewer/officetohtml/PPTXjs/css/nv.d3.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('plugins/hippo/core/assets/vendor/lara-file-previewer/officetohtml/PPTXjs/css/pptxjs.css') }}">
+    <link rel="stylesheet" href="{{ asset('plugins/hippo/core/assets/vendor/lara-file-previewer/officetohtml/PPTXjs/css/nv.d3.min.css') }}">
 
-    <script type="text/javascript" src="{{ asset('vendor/lara-file-previewer/officetohtml/PPTXjs/js/filereader.js') }}">
+    <script type="text/javascript" src="{{ asset('plugins/hippo/core/assets/vendor/lara-file-previewer/officetohtml/PPTXjs/js/filereader.js') }}">
     </script>
-    <script type="text/javascript" src="{{ asset('vendor/lara-file-previewer/officetohtml/PPTXjs/js/d3.min.js') }}">
+    <script type="text/javascript" src="{{ asset('plugins/hippo/core/assets/vendor/lara-file-previewer/officetohtml/PPTXjs/js/d3.min.js') }}">
     </script>
-    <script type="text/javascript" src="{{ asset('vendor/lara-file-previewer/officetohtml/PPTXjs/js/nv.d3.min.js') }}">
+    <script type="text/javascript" src="{{ asset('plugins/hippo/core/assets/vendor/lara-file-previewer/officetohtml/PPTXjs/js/nv.d3.min.js') }}">
     </script>
-    <script type="text/javascript" src="{{ asset('vendor/lara-file-previewer/officetohtml/PPTXjs/js/pptxjs.js') }}">
+    <script type="text/javascript" src="{{ asset('plugins/hippo/core/assets/vendor/lara-file-previewer/officetohtml/PPTXjs/js/pptxjs.js') }}">
     </script>
-    <script type="text/javascript" src="{{ asset('vendor/lara-file-previewer/officetohtml/PPTXjs/js/divs2slides.js') }}">
+    <script type="text/javascript" src="{{ asset('plugins/hippo/core/assets/vendor/lara-file-previewer/officetohtml/PPTXjs/js/divs2slides.js') }}">
     </script>
 
     <!--All Spreadsheet -->
-    <link rel="stylesheet" href="{{ asset('vendor/lara-file-previewer/officetohtml/SheetJS/handsontable.full.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('plugins/hippo/core/assets/vendor/lara-file-previewer/officetohtml/SheetJS/handsontable.full.min.css') }}">
     <script type="text/javascript"
-        src="{{ asset('vendor/lara-file-previewer/officetohtml/SheetJS/handsontable.full.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('vendor/lara-file-previewer/officetohtml/SheetJS/xlsx.full.min.js') }}">
+        src="{{ asset('plugins/hippo/core/assets/vendor/lara-file-previewer/officetohtml/SheetJS/handsontable.full.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('plugins/hippo/core/assets/vendor/lara-file-previewer/officetohtml/SheetJS/xlsx.full.min.js') }}">
     </script>
     <!--Image viewer-->
     <link rel="stylesheet"
-        href="{{ asset('vendor/lara-file-previewer/officetohtml/verySimpleImageViewer/css/jquery.verySimpleImageViewer.css') }}">
+        href="{{ asset('plugins/hippo/core/assets/vendor/lara-file-previewer/officetohtml/verySimpleImageViewer/css/jquery.verySimpleImageViewer.css') }}">
     <script type="text/javascript"
-        src="{{ asset('vendor/lara-file-previewer/officetohtml/verySimpleImageViewer/js/jquery.verySimpleImageViewer.js') }}">
+        src="{{ asset('plugins/hippo/core/assets/vendor/lara-file-previewer/officetohtml/verySimpleImageViewer/js/jquery.verySimpleImageViewer.js') }}">
     </script>
     <!--officeToHtml-->
-    <script src="{{ asset('vendor/lara-file-previewer/officetohtml/officeToHtml/officeToHtml.js') }}"></script>
-    <link rel="stylesheet" href="{{ asset('vendor/lara-file-previewer/officetohtml/officeToHtml/officeToHtml.css') }}">
+    <script src="{{ asset('plugins/hippo/core/assets/vendor/lara-file-previewer/officetohtml/officeToHtml/officeToHtml.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('plugins/hippo/core/assets/vendor/lara-file-previewer/officetohtml/officeToHtml/officeToHtml.css') }}">
     
     <style>
         .jqvsiv_main_image_content img {
@@ -94,7 +94,7 @@ $page_title = $filename;
                     /** true,false*/
                     slideType: "revealjs",
                     /*'divs2slidesjs' (default) , 'revealjs'(https://revealjs.com) */
-                    revealjsPath: "{{ asset('vendor/lara-file-previewer/revealjs/') }}",
+                    revealjsPath: "{{ asset('plugins/hippo/core/assets/vendor/lara-file-previewer/revealjs/') }}",
                     /*path to js file of revealjs. default:  './revealjs/reveal.js'*/
                     keyBoardShortCut: true,
                     /** true,false ,condition: slideMode: true*/

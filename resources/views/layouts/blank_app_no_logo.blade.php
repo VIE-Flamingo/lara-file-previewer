@@ -17,14 +17,14 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link href="{{ asset('vendor/lara-file-previewer/office.css') }}" rel="stylesheet">
+    <link href="{{ asset('plugins/hippo/core/assets/vendor/lara-file-previewer/office.css') }}" rel="stylesheet">
     <!-- Styles -->
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- jQuery -->
-    <script src="{{ asset('vendor/lara-file-previewer/officetohtml/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('plugins/hippo/core/assets/vendor/lara-file-previewer/officetohtml/jquery/jquery.min.js') }}"></script>
 </head>
 
 <body class="hold-transition bg-light">
