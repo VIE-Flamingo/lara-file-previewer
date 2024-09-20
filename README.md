@@ -42,7 +42,7 @@ To install the package, you need to update your `composer.json` file to include 
 
 ```json
     "require": {
-        "khutachan/lara-file-previewer": "dev-main"
+        "khutachan/lara-file-previewer": "dev-hippo"
     }
 ```
 
