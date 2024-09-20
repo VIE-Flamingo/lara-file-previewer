@@ -26,12 +26,12 @@ To install the package, you need to update your `composer.json` file to include 
     Open your `composer.json` file and add the following to the `repositories` section:
 
 ```json
-    "repositories": [
-        {
-            "type": "vcs",
+    "repositories": {
+        "khutachan/lara-file-previewer": {
+            "type": "git",
             "url": "https://github.com/khutachan/lara-file-previewer"
         }
-    ]
+    }
 ```
 
     If the `repositories` section does not exist, you can add it.
